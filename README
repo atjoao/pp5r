@@ -1,0 +1,15 @@
+p5r patches
+- skips intro (skips network prompt)
+- 16:9 to x ratio (you might need to run the game in a 16:9 resolution, to 16:10 scaling be applied, ui stretch)
+
+From where code was stolen:
+- https://codeberg.org/Lyall/ (dll, memory, etc..)
+- https://www.reddit.com/r/SteamDeck/comments/yk5zxl/comment/nta5vu8/ (pattern)
+- https://github.com/Sewer56/p5rpc.modloader/blob/master/p5rpc.modloader/Patches/P5R/SkipIntro.cs (pattern)
+
+Building:
+clang++ (-D_DEBUG) -shared -static -o pp5r.asi dllmain.cpp -lkernel32 -luser32 -ldbghelp
+
+Using:
+Download ASI Loader https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
+Put pp5r.asi and the chosen dll next to P5R.exe
