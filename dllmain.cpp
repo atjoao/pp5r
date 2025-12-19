@@ -10,7 +10,7 @@ std::pair DesktopDimensions = { 0, 0 };
 
 // https://www.reddit.com/r/SteamDeck/comments/yk5zxl/comment/nta5vu8/
 void PatchAspectRatio() {
-    Log("Patching Aspect Ratio");
+    Log("Patching Aspect Ratio\n");
     float newAspect = (float)DesktopDimensions.first / (float)DesktopDimensions.second;
     Log("Detected Resolution: %dx%d (Aspect: %f)\n", DesktopDimensions.first, DesktopDimensions.second, newAspect);
 

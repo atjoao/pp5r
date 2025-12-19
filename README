@@ -8,7 +8,7 @@ From where code was stolen:
 - https://github.com/Sewer56/p5rpc.modloader/blob/master/p5rpc.modloader/Patches/P5R/SkipIntro.cs
 
 Building:
-clang++ (-D_DEBUG) -shared -O3 -o pp5r.asi dllmain.cpp
+clang++ (-D_DEBUG) -shared -static -o pp5r.asi dllmain.cpp -lkernel32 -luser32 -ldbghelp
 
 Using:
 Download ASI Loader https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
